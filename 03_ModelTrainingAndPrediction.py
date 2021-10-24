@@ -1,6 +1,4 @@
 import pandas as pd
-from sklearn.linear_model import LinearRegression
-import numpy as np
 
 # Read train data
 dataFrame = pd.read_csv('train_data.csv',sep=';')
@@ -13,6 +11,8 @@ Y = dataFrame.TravelTimeInHours
 
 # Train the model
 from sklearn.linear_model import LinearRegression
+import numpy as np
+
 model = LinearRegression().fit(np.array(X).reshape(-1,1), Y)
 
 # Predict travel time for different departure hours

@@ -11,7 +11,6 @@ avoid = "unpavedRoads"                       # Avoid unpaved roads
 departAt = "2021-10-20T10:00:00"             # Departure date and time
 key = "<TYPE_YOUR_API_KEY_HERE>"             # API Key
 
-
 # Building the request URL
 baseUrl = "https://api.tomtom.com/routing/1/calculateRoute/";
 
@@ -25,7 +24,7 @@ requestParams = (
 
 requestUrl = baseUrl + requestParams + "&key=" + key
 
-print("Request URL: " + requestUrl)
+print("Request URL: " + requestUrl + "\n")
 
 # Sending the request
 response = requests.get(requestUrl)
@@ -44,5 +43,5 @@ if(response.status_code == 200):
     travelTime = routeSummary['travelTimeInSeconds'] / 3600
     
     # Print results
-    print(f"Depart at: {departAt},\tETA: {eta},\tTravel time:{travelTime:.2f}h")
+    print(f"Depart at: {departAt},\tETA: {eta},\tTravel time: {travelTime:.2f}h")
 

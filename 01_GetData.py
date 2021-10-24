@@ -9,7 +9,7 @@ traffic = "true"                             # To include Traffic information
 travelMode = "truck"                         # Travel by truck
 avoid = "unpavedRoads"                       # Avoid unpaved roads
 departAt = "2021-10-20T10:00:00"             # Departure date and time
-key = "key=<TYPE_YOUR_API_KEY_HERE>"         # API Key
+key = "<TYPE_YOUR_API_KEY_HERE>"             # API Key
 
 
 # Building the request URL
